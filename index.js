@@ -37,6 +37,10 @@ app.use('/api/users', userRouter);
 app.use('/api/posts', postRouter);
 app.use('/api/categories', catRouter);
 
+app.get('/', (req, res) => {
+   res.send('this is a backend server for React blog app.');
+});
+
 const DB_URL = process.env.DB_URL;
 const PORT = process.env.PORT || 5000;
 
